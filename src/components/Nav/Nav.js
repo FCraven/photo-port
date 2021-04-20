@@ -22,18 +22,17 @@ const Nav = () => {
   return (
     <header>
       <h2>
-        <a href='/'>
+        <a data-testid='link' href='/'>
           <span role='img'
             aria-label='camera'>
             📸
-          </span>
-           Oh Snap!
+          </span>Oh Snap!
         </a>
       </h2>
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a href="#about">about me</a>
+            <a data-testid='about' href="#about">about me</a>
           </li>
           <li>
             <span>contact</span>
