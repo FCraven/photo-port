@@ -1,47 +1,41 @@
+import { useState } from 'react';
+import { capitalizeFirstLetter } from '../../utils/helpers'
 
+const Nav =(props)=> {
+  const {
+    categories = [],
+    setCurrentCategory,
+    currentCategory,
+  } = props;
 
-const Nav = () => {
-  const categories = [
-    {
-      name: "Commercial",
-      description:
-        "Photos of grocery stores, food trucks, and other commercial projects",
-    },
-    { name: "Portraits", description: "Portraits of people in my life" },
-    { name: "Food", description: "Delicious delicacies" },
-    {
-      name: "Landscape",
-      description: "Fields, farmhouses, waterfalls, and the beauty of nature",
-    }
-  ];
 
   const categorySelected =(name)=> {
     console.log(name)
   }
 
   return (
-    <header>
+    <header className='flex-row px-1'>
       <h2>
-        <a href='/'>
-          <span role='img'
-            aria-label='camera'>
+        <a data-testid='link' href='/'>
+          <span role='img' aria-label='camera'>
+            {' '}
             📸
-          </span>
-           Oh Snap!
+          </span>{' '}
+          Oh Snap!
         </a>
       </h2>
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a href="#about">about me</a>
+            <a data-testid='about' href="#about">About me</a>
           </li>
-          <li>
-            <span>contact</span>
+          <li className='mx-2'>
+            <span>Contact</span>
           </li>
           {categories.map((category) => (
-            <li className="mx-1"
+            <li className={`mx-1 ${currentCategory.name === category.name && 'navActive'}`}
                 key={category.name}>
-              <span onClick={() => categorySelected(category.name)}>{category.name}</span>
+              <span onClick={() => setCurrentCategory(category)}>{capitalizeFirstLetter(category.name)}</span>
             </li>
           ))}
         </ul>

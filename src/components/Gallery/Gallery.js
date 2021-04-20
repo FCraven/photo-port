@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import photo from "../../assets/small/commercial/0.jpg";
 
 
 const Gallery =(props)=> {
+
   const currentCategory = {
     name: 'commercial',
     description: 'Photos of grocery stores, food trucks, and other commercial projects'
