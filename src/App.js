@@ -1,7 +1,7 @@
 import './App.css';
 import {  About,
-          Nav
-                } from './components'
+          Nav,
+          Gallery } from './components'
 
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
     <div>
       <Nav />
       <main>
+        <Gallery />
         <About />
       </main>
     </div>
