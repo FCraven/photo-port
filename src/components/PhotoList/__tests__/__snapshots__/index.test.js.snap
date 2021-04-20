@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoList is rendering  1`] = `
+<DocumentFragment>
+  <div
+    class="flex-row"
+  />
+</DocumentFragment>
+`;
+
+exports[`PhotoList is rendering matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex-row"
+  />
+</DocumentFragment>
+`;
+
+exports[`PhotoList is rendering renders 1`] = `
+<DocumentFragment>
+  <div
+    class="flex-row"
+  />
+</DocumentFragment>
+`;
