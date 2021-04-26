@@ -8,11 +8,6 @@ const Nav =(props)=> {
     currentCategory,
   } = props;
 
-
-  const categorySelected =(name)=> {
-    console.log(name)
-  }
-
   useEffect(()=> {
     document.title = capitalizeFirstLetter(currentCategory.name)
   }, [currentCategory])
